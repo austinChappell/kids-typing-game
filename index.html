@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keyboard Game</title>
+    <link type='text/css' rel='stylesheet' href='typing.css' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id='character'></div>
+    <img id='image' />
+
+    <div class='progress-bar'>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+      <div class='bar-segment empty'></div>
+    </div>
+
+    <audio id='audio'>
+      <source src='audio/right-answer.mp3' type='audio/wav' id='right-answer' />
+    </audio>
+
+    <audio id='victory-music' loop='loop'>
+      <source src='audio/victory-music.wav' type='audio/wav' />
+    </audio>
+
+    <video id='victory-vid' loop='loop' class='hide'>
+      <!-- <source src='video/dancing-air-guy.mp4' type='video/mp4' id='victory-vid-src'/> -->
+    </video>
+
+    <button id='retry' class='hide'>Try Again!</button>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='typing.js'></script>
+  </body>
+</html>
