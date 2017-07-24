@@ -187,12 +187,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
   $(document).keypress(function(e){
     var letter = $('#character').text();
+    var lowerCase = letter.toLowerCase();
     var keyCode = letter.charCodeAt();
+    var lowerCaseKeyCode = lowerCase.charCodeAt();
     var countdown = $('.empty').length;
 
-    if(e.which === keyCode && countdown > 1) {
+    if((e.which === keyCode || e.which === lowerCaseKeyCode) && countdown > 1) {
       rightAnswer();
-    } else if (e.which === keyCode && countdown === 1) {
+    } else if ((e.which === keyCode || e.which === lowerCaseKeyCode) && countdown === 1) {
       rightAnswer();
       roundComplete();
       $('#retry').on('click', function() {
